@@ -20,6 +20,8 @@ import (
 	"runtime"
 	"strings"
 
+	"colt/soong/android"
+
 	"github.com/google/blueprint/proptools"
 )
 
@@ -124,6 +126,9 @@ type variableProperties struct {
 			Static_libs  []string
 			Srcs         []string
 		}
+
+		// include Colt variables
+		Colt android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -287,6 +292,9 @@ type productVariables struct {
 	ProductHiddenAPIStubsTest   []string `json:",omitempty"`
 
 	TargetFSConfigGen []string `json:",omitempty"`
+
+	// include Colt variables
+	Colt android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
