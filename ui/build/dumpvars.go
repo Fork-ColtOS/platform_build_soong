@@ -125,7 +125,7 @@ func dumpMakeVars(ctx Context, config Config, goals, vars []string, write_soong_
 var BannerVars = []string{
 	"PLATFORM_VERSION_CODENAME",
 	"PLATFORM_VERSION",
-	"COLT_BUILD_VERSION",
+	"COLT_VERSION",
 	"TARGET_PRODUCT",
 	"TARGET_BUILD_VARIANT",
 	"TARGET_BUILD_TYPE",
@@ -184,7 +184,7 @@ func Banner(make_vars map[string]string) string {
 	fmt.Fprintln(b, "*    Welcome to ColtOS::Building Envoirnment:)   *")
 	fmt.Fprintln(b, "*    -----------------------------------------   *")
 	fmt.Fprintln(b, "**************************************************")
-	fmt.Fprintf(b, "%s=%s\n", "COLT_BUILD_VERSION", make_vars["COLT_BUILD_VERSION"])
+	fmt.Fprintf(b, "%s=%s\n", "COLT_VERSION", make_vars["COLT_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION_CODENAME", make_vars["PLATFORM_VERSION_CODENAME"])
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION", make_vars["PLATFORM_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "TARGET_PRODUCT", make_vars["TARGET_PRODUCT"])
